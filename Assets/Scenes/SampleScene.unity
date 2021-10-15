@@ -130,9 +130,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4000220518375677079, guid: f5edd696ee66dcc4d9f9e9d36993398b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5940742270290722538, guid: f5edd696ee66dcc4d9f9e9d36993398b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553806197157950077, guid: f5edd696ee66dcc4d9f9e9d36993398b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7379479602534492502, guid: f5edd696ee66dcc4d9f9e9d36993398b, type: 3}
       propertyPath: m_Name
       value: p_Squad_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450810350555526867, guid: f5edd696ee66dcc4d9f9e9d36993398b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8221402411600264105, guid: f5edd696ee66dcc4d9f9e9d36993398b, type: 3}
       propertyPath: m_RootOrder
@@ -554,7 +570,7 @@ GameObject:
   - component: {fileID: 1564668473}
   - component: {fileID: 1564668472}
   - component: {fileID: 1564668474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fighter 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

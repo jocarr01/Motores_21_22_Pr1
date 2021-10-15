@@ -28,6 +28,6 @@ public class Ship_AttackController : MonoBehaviour
     }
     public void Shoot()
     {
-            Instantiate(p_Shot, new Vector3(_myTransform.position.x, _myTransform.position.y, 0), Quaternion.identity);
-    }
+        Instantiate(p_Shot, new Vector3(_myTransform.position.x, _myTransform.position.y, 0), Quaternion.identity);
+    }   
 }

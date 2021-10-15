@@ -32,7 +32,8 @@ public class ShipInputController : MonoBehaviour
         {
             _desiredMovementDirection.y = -1.0f;
         }
-        else if (Input.GetKey(KeyCode.A))
+
+        if (Input.GetKey(KeyCode.A))
         {
             _desiredMovementDirection.x = -1.0f;
         }
@@ -40,15 +41,16 @@ public class ShipInputController : MonoBehaviour
         {
             _desiredMovementDirection.x = 1.0f;
         }
-        else if (Input.GetKey(KeyCode.X))
-        {
-            _elapsedTime += Time.deltaTime;
-            if (_elapsedTime > _duration)
-            {
-                _myShipAttackComponent.Shoot(); 
-                _elapsedTime = 0;
-            }
 
+        if (Input.GetKey(KeyCode.Space))
+        {
+            //_elapsedTime += Time.deltaTime;
+            //if (_elapsedTime > _duration)
+            //{
+            //    _myShipAttackComponent.Shoot(); 
+            //    _elapsedTime = 0;
+            //}
+            _myShipAttackComponent.Shoot();
         }
         _desiredMovementDirection.Normalize();
         _myShipMovementComponent.SetMovementDirection(_desiredMovementDirection);
