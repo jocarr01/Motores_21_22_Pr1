@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ship_AttackController : MonoBehaviour
 {
     #region parameters
-    private float _duration = 0.5f;
+    //private float _duration = 0.5f;
     #endregion
     #region references
     private Transform _myTransform;

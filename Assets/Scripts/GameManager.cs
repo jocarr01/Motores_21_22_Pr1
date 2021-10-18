@@ -5,8 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     #region parameters
-    private bool _isGameRunning=true;
-    private int score=0;
+    private bool _isGameRunning = true;
+    private int score = 0;
 
     #endregion
     #region references
@@ -31,7 +31,8 @@ public class GameManager : MonoBehaviour
     {
         _instance = Instance;
         _squads[0].GetComponent<GameObject>();
-        //_instance.GetComponent<GameManager>();
+        //Player = GameObject.Find("Fighter");
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -65,9 +66,15 @@ public class GameManager : MonoBehaviour
     }
     private void GameOver()
     {
-        _GameOver.SetActive(true);
-        Player.SetActive(false);
+        //_GameOver.SetActive(true);        
         _isGameRunning = false;
+        if (Player != null)
+        {
+            Debug.Log("Encontramos  jugador");
+            Player.SetActive(false);
+        }
+        else
+            Debug.Log("No encontramos  jugador");
     }
     public static GameManager Instance
     {

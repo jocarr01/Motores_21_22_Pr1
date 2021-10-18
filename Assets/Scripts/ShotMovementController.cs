@@ -11,32 +11,36 @@ public class ShotMovementController : MonoBehaviour
     #region references
     private Transform _myTransform;
     private BoxCollider2D _myBoxCollider2D;
-    private int _myEnemyLayer;
+    //private int _myEnemyLayer;
+    private Enemy_LifeComponent _myEnemyLifeComponent;
     #endregion
     // Start is called before the first frame update
     void Start()
     {
         _myTransform = GetComponent<Transform>();
-        _myBoxCollider2D = GetComponent<BoxCollider2D>();
-        _myBoxCollider2D.isTrigger = true;
-        _myEnemyLayer = LayerMask.NameToLayer("Enemy");
+       //_myEnemyLayer = LayerMask.NameToLayer("Enemy");        
     }
 
     // Update is called once per frame
     void Update()
     {
         _myTransform.Translate(_shotSpeed * Vector3.up*Time.deltaTime);
-       // Debug.Log("Update ");
     }
 
-    //private void OnCollisionEnter2D(Collider2D collision)
-    //{
-    //    Debug.Log("He chocado con el objeto: " + collision.gameObject.name);
-    //}
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log("He chocado con el objeto: " + col.gameObject.name);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-          Debug.Log("He chocado con el objeto: " + collision.gameObject.name);
-        //collision.gameObject.GetComponent<Enemy_LifeComponent>().Damage();
+    {         
+
+         _myEnemyLifeComponent = collision.GetComponent<Enemy_LifeComponent>();
+
+        if (_myEnemyLifeComponent != null)
+        {
+            //Debug.Log("La bala ha chocado con un enemigo");
+            _myEnemyLifeComponent.Damage();
+        }
     }
 }

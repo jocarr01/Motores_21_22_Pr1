@@ -11,7 +11,7 @@ public class ShipInputController : MonoBehaviour
     #region properties
     private Vector3 _desiredMovementDirection;
     private float _elapsedTime = 0.0f;
-    private float _duration = 0.5f;
+    private float _duration = 0.25f;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -44,13 +44,13 @@ public class ShipInputController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            //_elapsedTime += Time.deltaTime;
-            //if (_elapsedTime > _duration)
-            //{
-            //    _myShipAttackComponent.Shoot(); 
-            //    _elapsedTime = 0;
-            //}
-            _myShipAttackComponent.Shoot();
+            _elapsedTime += Time.deltaTime;
+            if (_elapsedTime > _duration)
+            {
+                _myShipAttackComponent.Shoot();
+                _elapsedTime = 0;
+            }
+            //_myShipAttackComponent.Shoot();
         }
         _desiredMovementDirection.Normalize();
         _myShipMovementComponent.SetMovementDirection(_desiredMovementDirection);

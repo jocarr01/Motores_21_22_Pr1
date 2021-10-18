@@ -8,7 +8,7 @@ public class SquadMovementComponent : MonoBehaviour
     [SerializeField]
     private int _initialDirection=-1;
     private float _verticalSpeed=-0.1f;
-    private float _horizontalSpeed=0.1f;
+    //private float _horizontalSpeed=0.1f;
     private float _frequency=2.0f;
     #endregion
     #region references

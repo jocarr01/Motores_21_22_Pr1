@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class Enemy_LifeComponent : MonoBehaviour
+public class DeathZone : MonoBehaviour
 {
     #region parameters
     [SerializeField]
     #endregion
     #region references
-
+    private Enemy_LifeComponent _myEnemyLifeComponent;
     #endregion
     #region properties
     #endregion
@@ -24,11 +23,16 @@ public class Enemy_LifeComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Damage();
+        
     }
-    public void Damage()
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.Instance.OnEnemyDies(10);
-        Destroy(this.gameObject);
+        _myEnemyLifeComponent = collision.GetComponent<Enemy_LifeComponent>();
+
+        if (_myEnemyLifeComponent != null)
+        {
+            GameManager.Instance.OnEnemyReachesBottomline();
+        }
     }
 }
