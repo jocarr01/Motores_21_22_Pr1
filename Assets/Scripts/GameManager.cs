@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     }
     public void OnEnemyDies(int scoreToAdd)
     {
-        score = scoreToAdd;
+        score += scoreToAdd;
         //Score.text = Score + score;
     }
     public void OnEnemyReachesBottomline()
@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
         }
         else
             Debug.Log("No encontramos  jugador");
+        Player.SetActive(false);
     }
     public static GameManager Instance
     {

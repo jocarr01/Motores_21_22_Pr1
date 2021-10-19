@@ -41,6 +41,7 @@ public class ShotMovementController : MonoBehaviour
         {
             //Debug.Log("La bala ha chocado con un enemigo");
             _myEnemyLifeComponent.Damage();
+            Destroy(this.gameObject);
         }
     }
 }

@@ -875,5 +875,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: WorldLimitDown
       objectReference: {fileID: 0}
+    - target: {fileID: 3349892010357611750, guid: 9747c3a3fd1fb6f4a85c75a27f6a6c0a, type: 3}
+      propertyPath: m_Constraints
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9747c3a3fd1fb6f4a85c75a27f6a6c0a, type: 3}
