@@ -20,7 +20,7 @@ public class WorldVerticalDeadlineComponent : MonoBehaviour
     {
         _myTransform = GetComponent<Transform>();
         _myDeadZone = GameObject.Find("WorldLimitDown");
-        _myDeadZonePosition = _myDeadZone.GetComponent<Trsansform>();
+        _myDeadZonePosition = _myDeadZone.GetComponent<Transform>();
     }
 
     // Update is called once per frame
