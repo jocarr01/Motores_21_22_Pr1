@@ -8,6 +8,8 @@ public class WorldVerticalDeadlineComponent : MonoBehaviour
     #endregion
     #region references
     private Transform _myTransform;
+    private GameObject _myDeadZone;
+    private Transform _myDeadZonePosition;
     #endregion
     #region properties
     #endregion
@@ -17,12 +19,15 @@ public class WorldVerticalDeadlineComponent : MonoBehaviour
     void Start()
     {
         _myTransform = GetComponent<Transform>();
+        _myDeadZone = GameObject.Find("WorldLimitDown");
+        _myDeadZonePosition = _myDeadZone.GetComponent<Trsansform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_myTransform.position.y <= 1)
+        //if (_myTransform.position.y <= 1)
+        if (_myDeadZonePosition.position.y <= 1)
         {
             Destroy(this.gameObject);
         }

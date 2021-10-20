@@ -9,7 +9,6 @@ public class Enemy_LifeComponent : MonoBehaviour
     [SerializeField]
     #endregion
     #region references
-
     #endregion
     #region properties
     #endregion

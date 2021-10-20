@@ -55,5 +55,4 @@ public class ShipInputController : MonoBehaviour
         _desiredMovementDirection.Normalize();
         _myShipMovementComponent.SetMovementDirection(_desiredMovementDirection);
     }
-
 }

@@ -32,7 +32,7 @@ public class Ship_LifeComponent : MonoBehaviour
 
         if (_myEnemyLifeComponent != null)
         {
-            Debug.Log("El jugador ha chocado con un enemigo");
+            //Debug.Log("El jugador ha chocado con un enemigo");
             GameManager.Instance.OnPlayerDies();
         }
     }
